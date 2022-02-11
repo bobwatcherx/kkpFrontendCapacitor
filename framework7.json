@@ -1,0 +1,26 @@
+{
+  "cwd": "/home/ubu/belajarweb/prosvelte",
+  "type": [
+    "capacitor"
+  ],
+  "name": "My App",
+  "pkg": "io.framework7.myapp",
+  "framework": "svelte",
+  "template": "blank",
+  "cssPreProcessor": false,
+  "bundler": "vite",
+  "capacitor": {
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkTheme": false,
+    "iconFonts": true,
+    "fillBars": false
+  },
+  "customBuild": false
+}

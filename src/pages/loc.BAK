@@ -1,0 +1,15 @@
+ const coordinates =  Geolocation.watchPosition();
+    console.log("cordnya " + JSON.stringify(coordinates));
+  latitudetext = coordinates.coords.latitude;
+  longitudetext = coordinates.coords.longitude;
+  if(latitudetext !== "" && longitudetext !=="" ){
+    axios.get(`https://us1.locationiq.com/v1/reverse.php?key=pk.0486f5d01fff6030f298b85565ca8046&lat=${latitudetext}&lon=${longitudetext}&format=json`)
+    .then((res)=>{
+      console.log(res.data.local_result)
+      console.log(res.data)
+      citytext = res.data.address.suburb
+      localresult = res.data.data;
+
+    })
+    console.log(latitudetext + " " + longitudetext)
+  }
